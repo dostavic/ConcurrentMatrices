@@ -1,0 +1,3 @@
+/home/dostavic/Code/C++/matrix_multiply/cmake-build-debug/CMakeFiles/matrix_multiply.dir
+/home/dostavic/Code/C++/matrix_multiply/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/dostavic/Code/C++/matrix_multiply/cmake-build-debug/CMakeFiles/rebuild_cache.dir
