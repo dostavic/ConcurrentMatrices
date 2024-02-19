@@ -1,4 +1,4 @@
-# Install script for directory: /home/dostavic/Code/C++/matrix_multiply
+# Install script for directory: /home/dostavic/Code/github/ConcurrentMatrices
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/dostavic/Code/C++/matrix_multiply/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/dostavic/Code/github/ConcurrentMatrices/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

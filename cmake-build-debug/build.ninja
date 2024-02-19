@@ -39,44 +39,75 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = /home/dostavic/Code/C++/matrix_multiply/cmake-build-debug/
+cmake_ninja_workdir = /home/dostavic/Code/github/ConcurrentMatrices/cmake-build-debug/
 # =============================================================================
-# Object build statements for EXECUTABLE target matrix_multiply
+# Object build statements for EXECUTABLE target matrix_multiply_sequential
 
 
 #############################################
-# Order-only phony target for matrix_multiply
+# Order-only phony target for matrix_multiply_sequential
 
-build cmake_object_order_depends_target_matrix_multiply: phony || CMakeFiles/matrix_multiply.dir
+build cmake_object_order_depends_target_matrix_multiply_sequential: phony || CMakeFiles/matrix_multiply_sequential.dir
 
-build CMakeFiles/matrix_multiply.dir/main.cpp.o: CXX_COMPILER__matrix_multiply_unscanned_Debug /home/dostavic/Code/C++/matrix_multiply/main.cpp || cmake_object_order_depends_target_matrix_multiply
-  DEP_FILE = CMakeFiles/matrix_multiply.dir/main.cpp.o.d
+build CMakeFiles/matrix_multiply_sequential.dir/main.cpp.o: CXX_COMPILER__matrix_multiply_sequential_unscanned_Debug /home/dostavic/Code/github/ConcurrentMatrices/main.cpp || cmake_object_order_depends_target_matrix_multiply_sequential
+  DEP_FILE = CMakeFiles/matrix_multiply_sequential.dir/main.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles/matrix_multiply.dir
-  OBJECT_FILE_DIR = CMakeFiles/matrix_multiply.dir
+  OBJECT_DIR = CMakeFiles/matrix_multiply_sequential.dir
+  OBJECT_FILE_DIR = CMakeFiles/matrix_multiply_sequential.dir
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target matrix_multiply
+# Link build statements for EXECUTABLE target matrix_multiply_sequential
 
 
 #############################################
-# Link the executable matrix_multiply
+# Link the executable matrix_multiply_sequential
 
-build matrix_multiply: CXX_EXECUTABLE_LINKER__matrix_multiply_Debug CMakeFiles/matrix_multiply.dir/main.cpp.o
+build matrix_multiply_sequential: CXX_EXECUTABLE_LINKER__matrix_multiply_sequential_Debug CMakeFiles/matrix_multiply_sequential.dir/main.cpp.o
   FLAGS = -g
-  OBJECT_DIR = CMakeFiles/matrix_multiply.dir
+  OBJECT_DIR = CMakeFiles/matrix_multiply_sequential.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_FILE = matrix_multiply
-  TARGET_PDB = matrix_multiply.dbg
+  TARGET_FILE = matrix_multiply_sequential
+  TARGET_PDB = matrix_multiply_sequential.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target matrix_multiply_parallel
+
+
+#############################################
+# Order-only phony target for matrix_multiply_parallel
+
+build cmake_object_order_depends_target_matrix_multiply_parallel: phony || CMakeFiles/matrix_multiply_parallel.dir
+
+build CMakeFiles/matrix_multiply_parallel.dir/parallel.cpp.o: CXX_COMPILER__matrix_multiply_parallel_unscanned_Debug /home/dostavic/Code/github/ConcurrentMatrices/parallel.cpp || cmake_object_order_depends_target_matrix_multiply_parallel
+  DEP_FILE = CMakeFiles/matrix_multiply_parallel.dir/parallel.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/matrix_multiply_parallel.dir
+  OBJECT_FILE_DIR = CMakeFiles/matrix_multiply_parallel.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target matrix_multiply_parallel
+
+
+#############################################
+# Link the executable matrix_multiply_parallel
+
+build matrix_multiply_parallel: CXX_EXECUTABLE_LINKER__matrix_multiply_parallel_Debug CMakeFiles/matrix_multiply_parallel.dir/parallel.cpp.o
+  FLAGS = -g
+  OBJECT_DIR = CMakeFiles/matrix_multiply_parallel.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = matrix_multiply_parallel
+  TARGET_PDB = matrix_multiply_parallel.dbg
 
 
 #############################################
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/dostavic/Code/C++/matrix_multiply/cmake-build-debug && /app/extra/clion/bin/cmake/linux/x64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /home/dostavic/Code/github/ConcurrentMatrices/cmake-build-debug && /app/extra/clion/bin/cmake/linux/x64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -87,7 +118,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/dostavic/Code/C++/matrix_multiply/cmake-build-debug && /app/extra/clion/bin/cmake/linux/x64/bin/cmake --regenerate-during-build -S/home/dostavic/Code/C++/matrix_multiply -B/home/dostavic/Code/C++/matrix_multiply/cmake-build-debug
+  COMMAND = cd /home/dostavic/Code/github/ConcurrentMatrices/cmake-build-debug && /app/extra/clion/bin/cmake/linux/x64/bin/cmake --regenerate-during-build -S/home/dostavic/Code/github/ConcurrentMatrices -B/home/dostavic/Code/github/ConcurrentMatrices/cmake-build-debug
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -103,9 +134,9 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 
 #############################################
-# Folder: /home/dostavic/Code/C++/matrix_multiply/cmake-build-debug
+# Folder: /home/dostavic/Code/github/ConcurrentMatrices/cmake-build-debug
 
-build all: phony matrix_multiply
+build all: phony matrix_multiply_sequential matrix_multiply_parallel
 
 # =============================================================================
 # Built-in targets
@@ -114,14 +145,14 @@ build all: phony matrix_multiply
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeCInformation.cmake /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeCXXInformation.cmake /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/Compiler/GNU-C.cmake /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/Compiler/GNU-CXX.cmake /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/Compiler/GNU.cmake /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux-GNU-C.cmake /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux-GNU-CXX.cmake /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux-GNU.cmake /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux-Initialize.cmake /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux.cmake /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/UnixPaths.cmake /home/dostavic/Code/C++/matrix_multiply/CMakeLists.txt CMakeCache.txt CMakeFiles/3.27.0/CMakeCCompiler.cmake CMakeFiles/3.27.0/CMakeCXXCompiler.cmake CMakeFiles/3.27.0/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeCInformation.cmake /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeCXXInformation.cmake /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/Compiler/GNU-C.cmake /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/Compiler/GNU-CXX.cmake /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/Compiler/GNU.cmake /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux-GNU-C.cmake /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux-GNU-CXX.cmake /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux-GNU.cmake /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux-Initialize.cmake /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux.cmake /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/UnixPaths.cmake /home/dostavic/Code/github/ConcurrentMatrices/CMakeLists.txt CMakeCache.txt CMakeFiles/3.27.0/CMakeCCompiler.cmake CMakeFiles/3.27.0/CMakeCXXCompiler.cmake CMakeFiles/3.27.0/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeCInformation.cmake /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeCXXInformation.cmake /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/Compiler/GNU-C.cmake /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/Compiler/GNU-CXX.cmake /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/Compiler/GNU.cmake /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux-GNU-C.cmake /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux-GNU-CXX.cmake /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux-GNU.cmake /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux-Initialize.cmake /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux.cmake /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/UnixPaths.cmake /home/dostavic/Code/C++/matrix_multiply/CMakeLists.txt CMakeCache.txt CMakeFiles/3.27.0/CMakeCCompiler.cmake CMakeFiles/3.27.0/CMakeCXXCompiler.cmake CMakeFiles/3.27.0/CMakeSystem.cmake: phony
+build /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeCInformation.cmake /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeCXXInformation.cmake /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/Compiler/GNU-C.cmake /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/Compiler/GNU-CXX.cmake /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/Compiler/GNU.cmake /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux-GNU-C.cmake /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux-GNU-CXX.cmake /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux-GNU.cmake /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux-Initialize.cmake /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux.cmake /app/extra/clion/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/UnixPaths.cmake /home/dostavic/Code/github/ConcurrentMatrices/CMakeLists.txt CMakeCache.txt CMakeFiles/3.27.0/CMakeCCompiler.cmake CMakeFiles/3.27.0/CMakeCXXCompiler.cmake CMakeFiles/3.27.0/CMakeSystem.cmake: phony
 
 
 #############################################

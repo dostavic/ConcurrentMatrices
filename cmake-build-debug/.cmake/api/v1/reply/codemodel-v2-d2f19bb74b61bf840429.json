@@ -1,0 +1,69 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.27"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "matrix_multiply",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "matrix_multiply_parallel::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-matrix_multiply_parallel-Debug-e1d47d98cb18dde653fb.json",
+					"name" : "matrix_multiply_parallel",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "matrix_multiply_sequential::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-matrix_multiply_sequential-Debug-2df973b95e07b8312787.json",
+					"name" : "matrix_multiply_sequential",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/dostavic/Code/github/ConcurrentMatrices/cmake-build-debug",
+		"source" : "/home/dostavic/Code/github/ConcurrentMatrices"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

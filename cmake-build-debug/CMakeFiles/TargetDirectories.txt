@@ -1,3 +1,4 @@
-/home/dostavic/Code/C++/matrix_multiply/cmake-build-debug/CMakeFiles/matrix_multiply.dir
-/home/dostavic/Code/C++/matrix_multiply/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/dostavic/Code/C++/matrix_multiply/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/dostavic/Code/github/ConcurrentMatrices/cmake-build-debug/CMakeFiles/matrix_multiply_sequential.dir
+/home/dostavic/Code/github/ConcurrentMatrices/cmake-build-debug/CMakeFiles/matrix_multiply_parallel.dir
+/home/dostavic/Code/github/ConcurrentMatrices/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/dostavic/Code/github/ConcurrentMatrices/cmake-build-debug/CMakeFiles/rebuild_cache.dir
